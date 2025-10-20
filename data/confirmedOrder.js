@@ -24,47 +24,47 @@ export function getOrdersHTML(products, orderSummary){
              let quantity = orderItem.quantity
              let deliveryDate = orderItem.toBeDeliveredOn
     
-            let matchingProduct
-            products.forEach((product)=>{
-                if(product.id === productID){
-                    matchingProduct = product
-                }
-            })
+             const matchingProduct = products.find(product => product.id === productID);
     
-            productName = matchingProduct.name
-            productImage = matchingProduct.img
+             if (!matchingProduct) {
+                 console.error(`Error: Product with ID ${productID} in order ${orderID} was not found in the products list. Skipping item.`);
+                 return;
+             }
+
+             productName = matchingProduct.name
+             productImage = matchingProduct.img
     
     
-            itemInOrderHtml += `<div class="order-item">
-                    <div class="order-details-grid">
-                        <div class="product-image-container">
-                        <img src="${productImage}">
-                        </div>
+             itemInOrderHtml += `<div class="order-item">
+                     <div class="order-details-grid">
+                         <div class="product-image-container">
+                         <img src="${productImage}" alt="${productName}">
+                         </div>
     
-                        <div class="product-details">
-                        <div class="product-name">
-                            ${productName}
-                        </div>
-                        <div class="product-delivery-date">
-                            Arriving on: ${deliveryDate}
-                        </div>
-                        <div class="product-quantity">
-                            Quantity: ${quantity}
-                        </div>
-                        <button class="buy-again-button button-primary" data-product-id="${productID}">
-                            <img class="buy-again-icon" src="images/icons/buy-again.png">
-                            <span class="buy-again-message">Buy it again</span>
-                        </button>
-                        </div>
+                         <div class="product-details">
+                         <div class="product-name">
+                             ${productName}
+                         </div>
+                         <div class="product-delivery-date">
+                             Arriving on: ${deliveryDate}
+                         </div>
+                         <div class="product-quantity">
+                             Quantity: ${quantity}
+                         </div>
+                         <button class="buy-again-button button-primary" data-product-id="${productID}">
+                             <img class="buy-again-icon" src="images/icons/buy-again.png">
+                             <span class="buy-again-message">Buy it again</span>
+                         </button>
+                         </div>
     
-                        <div class="product-actions">
-                            <button class="track-package-button button-secondary" data-product-id="${productID}" data-quantity="${quantity}" data-product-name="${productName}" data-product-Img="${productImage}" data-delivery-date="${deliveryDate}">
-                            Track package
-                            </button>
-                        </div>
-                    </div>
-                    </div>
-                    `
+                         <div class="product-actions">
+                             <button class="track-package-button button-secondary" data-product-id="${productID}" data-quantity="${quantity}" data-product-name="${productName}" data-product-Img="${productImage}" data-delivery-date="${deliveryDate}">
+                             Track package
+                             </button>
+                         </div>
+                     </div>
+                     </div>
+                     `
         })
     
     
@@ -92,10 +92,10 @@ export function getOrdersHTML(products, orderSummary){
                   <div>${orderID}</div>
                 </div>
               </div>
-                    <div class="order-items">
-                        ${itemInOrderHtml}
-                    </div>
-            </div>        
+                        <div class="order-items">
+                            ${itemInOrderHtml}
+                        </div>
+            </div>          
         `
         let currentHtml = orderSummary.innerHTML
         orderSummary.innerHTML = orderHTML + currentHtml
