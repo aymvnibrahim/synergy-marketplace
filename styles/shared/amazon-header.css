@@ -117,9 +117,23 @@
     filter: invert(100%); 
 }
 
+.mobile-search-section{
+    display: none;
+    margin-bottom: 10px;
+    max-width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 @media (max-width: 800px) {
-    .amazon-header-middle-section{
-        margin: 0 !important;
+    .amazon-header-middle-section {
+        display: none;
+    }
+
+    .mobile-search-section{
+        display: flex;
     }
 }
 

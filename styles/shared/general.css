@@ -326,3 +326,30 @@ input:focus {
     justify-content: center;
   }
 }
+
+.searchPopCont{
+    margin-bottom: 10px;
+    background-color: #cfd1d1b6;
+    width: max-content;
+    padding: 8px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.searchPopCont p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.searchPopCont:hover{
+    background-color: #cfd1d1;
+}
+
+.dark-mode .searchPopCont{
+    background-color: #333333;
+}
+
+.dark-mode .searchPopCont:hover{
+    background-color: #444444;
+}
