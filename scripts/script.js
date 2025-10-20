@@ -141,7 +141,6 @@ function searchProducts() {
             mobileSearchBar.value = "";
         })
         
-
     
     if (searchQuery === '') {
         renderProductsGrid(products); 
@@ -172,28 +171,22 @@ searchBar.addEventListener('keydown', (event) => {
     }
 });
 
-// >>> START: LOGIC FOR MOBILE SEARCH BAR <<<
 const mobileSearchBar = document.querySelector('.mobile-search-bar');
 const mobileSearchButton = document.querySelector('.mobile-search-btn');
 
 if (mobileSearchBar && mobileSearchButton) {
-    // 1. Mobile button click listener
     mobileSearchButton.addEventListener('click', () => {
-        // Sync mobile value to desktop searchBar (which searchProducts reads)
         searchBar.value = mobileSearchBar.value; 
         searchProducts();
     });
 
-    // 2. Mobile Enter key listener
     mobileSearchBar.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-            // Sync mobile value to desktop searchBar
             searchBar.value = mobileSearchBar.value; 
             searchProducts();
         }
     });
 
-    // 3. Keep the two search bars synchronized for better UX
     mobileSearchBar.addEventListener('input', () => {
         searchBar.value = mobileSearchBar.value;
     });
@@ -201,6 +194,5 @@ if (mobileSearchBar && mobileSearchButton) {
         mobileSearchBar.value = searchBar.value;
     });
 }
-// >>> END: LOGIC FOR MOBILE SEARCH BAR <<<
 
 renderProductsGrid(products);
