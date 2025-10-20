@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout-header.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout.css">
+  </head>
+  <body>
+    <div class="checkout-header">
+      <div class="header-content">
+        <div class="checkout-header-left-section">
+          <a href="index.html" class="site-logo">
+            <span class="site-logo-text">Synergy</span>
+            <span class="site-logo-tagline">Marketplace</span>
+          </a>
+          </div>
+
+        <div class="checkout-header-middle-section">
+          Checkout (<a class="return-to-home-link"
+            href="index.html"><span class="cart-quantity">0</span> items</a>)
+        </div>
+
+        <div class="checkout-header-right-section">
+          <button class="dark-mode-toggle-button" title="Toggle Dark Mode">
+            <div class="dark-mode-toggle-icon">&#9728;</div>
+          </button>
+          <img src="images/icons/checkout-lock-icon.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="page-title">Review your order</div>
+
+      <div class="checkout-grid">
+        <div class="order-summary">
+
+        </div>
+
+        <div class="payment-summary">
+          <div class="payment-summary-title">
+            Order Summary
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Items (<span class="cart-quantity">0</span>):</div>
+            <div class="payment-summary-money">$0.00</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Shipping &amp; handling:</div>
+            <div class="payment-summary-money shipping-fee-text">$0.00</div>
+          </div>
+
+          <div class="payment-summary-row subtotal-row">
+            <div>Total before tax:</div>
+            <div class="payment-summary-money total-before-tax">$0.00</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Estimated tax (10%):</div>
+            <div class="payment-summary-money tax">$0.00</div>
+          </div>
+
+          <div class="payment-summary-row total-row">
+            <div>Order total:</div>
+            <div class="payment-summary-money orderTotal">$0.00</div>
+          </div>
+
+          <button class="place-order-button button-primary">
+            Place your order
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/dayjs@1.11.18/dayjs.min.js"></script>
+    <script type="module" src="scripts/checkout.js"></script>
+  </body>
+</html>

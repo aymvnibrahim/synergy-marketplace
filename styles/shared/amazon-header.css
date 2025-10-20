@@ -1,0 +1,274 @@
+.amazon-header {
+    background-color: white; /* Clean white header */
+    color: #333333;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.amazon-header-left-section {
+    width: 180px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .amazon-header-left-section {
+        width: unset;
+    }
+
+
+
+}
+
+.header-link {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.15s;
+}
+
+.header-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- CUSTOM LOGO STYLE --- */
+.site-logo {
+    width: 100px; 
+    margin-top: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.site-logo-text {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 900; 
+    color: #008080; 
+    display: block;
+    line-height: 1;
+}
+
+.site-logo-tagline {
+    font-size: 10px;
+    font-weight: 500;
+    color: #777777; 
+    display: block;
+    line-height: 1;
+}
+
+/* --- END CUSTOM LOGO STYLE --- */
+
+@media (max-width: 575px) {
+}
+
+.amazon-header-middle-section {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #c0c0c0;
+}
+
+.search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    background-color: white;
+}
+
+.search-button {
+    background-color: #008080; 
+    border: none;
+    width: 45px;
+    height: 40px;
+    flex-shrink: 0;
+    transition: background-color 0.15s;
+}
+
+.search-button:hover {
+    background-color: #009999;
+}
+
+.search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+    filter: invert(100%); 
+}
+
+@media (max-width: 800px) {
+    .amazon-header-middle-section{
+        margin: 0 !important;
+    }
+}
+
+.amazon-header-right-section {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+/* --- NEW DARK MODE TOGGLE STYLES --- */
+.dark-mode-toggle-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 10px; /* Space it from Orders link */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: background-color 0.15s;
+}
+
+.dark-mode-toggle-button:hover {
+    background-color: #f0f0f0;
+}
+
+.dark-mode-toggle-icon {
+    /* Unicode sun symbol (or image placeholder) */
+    font-size: 20px;
+    line-height: 1;
+    color: #4a67a0; /* Muted blue icon color */
+    transition: color 0.15s;
+}
+/* --- END NEW DARK MODE TOGGLE STYLES --- */
+
+
+.orders-link {
+    color: #333333;
+    margin-right: 15px;
+}
+
+.returns-text {
+    display: block;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.orders-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cart-link {
+    color: #333333;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 6px;
+}
+
+.cart-icon {
+    width: 50px;
+    filter: invert(100%);
+    opacity: 80%;
+}
+
+.cart-text {
+    display: none; 
+}
+
+.cart-quantity {
+    color: #008080; 
+    font-size: 16px; 
+    font-weight: 700;
+
+    position: absolute;
+    top: 4px; 
+    left: 22px; 
+    
+    width: 26px;
+    text-align: center;
+}
+
+/* Dark Mode Header */
+.dark-mode .amazon-header {
+    background-color: #2b2b2b; 
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .amazon-header-left-section {
+    color: #00ffff; 
+}
+
+.dark-mode .site-logo-text {
+    color: #00ffff; 
+}
+
+.dark-mode .site-logo-tagline {
+    color: #aaaaaa;
+}
+
+.dark-mode .header-link:hover {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .amazon-header-middle-section {
+    border: 1px solid #555555;
+}
+
+.dark-mode .search-bar {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+}
+
+.dark-mode .search-button {
+    background-color: #00ffff;
+}
+
+.dark-mode .search-icon {
+    filter: invert(0%); 
+}
+
+.dark-mode .orders-link,
+.dark-mode .cart-link {
+    color: #e0e0e0;
+}
+
+.dark-mode .cart-quantity {
+    color: #00ffff;
+}
+
+/* --- DARK MODE TOGGLE STYLES --- */
+.dark-mode .dark-mode-toggle-button:hover {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .dark-mode-toggle-icon {
+    color: #00ffff;
+}
+
+.dark-mode .cart-icon {
+    filter: invert(0%);
+    opacity: 100%;
+}

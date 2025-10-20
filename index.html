@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amazon Project</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/amazon.css">
+  </head>
+  <body>
+    <div class="amazon-header">
+      <div class="amazon-header-left-section">
+        <a href="index.html" class="header-link site-logo">
+          <span class="site-logo-text">Synergy</span>
+          <span class="site-logo-tagline">Marketplace</span>
+        </a>
+      </div>
+
+      <div class="amazon-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png">
+        </button>
+      </div>
+
+      <div class="amazon-header-right-section">
+        <button class="dark-mode-toggle-button active-search-hidden" title="Toggle Dark Mode">
+            <div class="dark-mode-toggle-icon">&#9728;</div>
+        </button>
+
+        <a class="orders-link header-link active-search-hidden" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-quantity"></div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="main">
+      <div class="products-grid">
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <div class="chartpopup">
+      <div class="chart-view">
+        <a class="close">X</a>
+      </div>
+    </div>
+    
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-left">
+          <a href="index.html" class="site-logo footer-logo-text-only">
+            <span class="site-logo-text">Synergy</span>
+            <span class="site-logo-tagline">Marketplace</span>
+          </a>
+        </div>
+        
+        <div class="footer-right">
+          <p class="copyright-text">&copy; 2025 Synergy Marketplace. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+          <p>By: Ayman</p>
+      </div>
+    </footer>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
+</html>
